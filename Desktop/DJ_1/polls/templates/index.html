@@ -1,0 +1,49 @@
+{% extends 'layout/layout.html' %}
+{% block title %}
+Index page
+{% endblock %}
+
+{% block content %}
+
+
+    <script>
+        function hello()
+        {
+
+            var f_name=document.getElementById("firstname").value;
+            var msg_txt=document.getElementById("txt_area1").value;
+
+            document.writeln('1st name is  ' ,{{ what_ever }});
+
+        }
+        function generate()
+        {
+             //window.location.reload();
+            document.getElementById("txt_area1").value={{ what_ever }};
+
+            //request.get("www.google.com");
+        }
+
+    </script>
+
+    First name:<br>
+<input type="text" id="firstname">
+<br>
+Last name:<br>
+<input type="text" id="lastname">
+    <br> <br> <br>
+    <button type="button1" onclick="javascript: hello()">Button_Click
+    </button>
+
+    <button type="btn2" onclick="javascript:generate()">OTP Generation
+    </button>
+    <br>
+   {{ what_ever }}
+
+    <textarea id="txt_area1" rows="10" cols="30">
+
+    </textarea>
+
+
+{% endblock %}
+
